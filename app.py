@@ -50,7 +50,7 @@ def before_request():
 			
 		for story in com_p[:10]:
 			com_stories.append(story)
-		like_dic[medcos[i]]ke_stories
+		like_dic[medcos[i]] = like_stories
 		share_dic[medcos[i]] = share_stories
 		com_dic[medcos[i]] = com_stories
 
