@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Covit</title>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='img/icon2.png') }}">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link href='http://fonts.googleapis.com/css?family=Sintony:400,700' rel='stylesheet' type='text/css'/>
+		<!--Choose Stylesheet here-->
+		<link href='../static/css/stylesheet.css' rel='stylesheet' type='text/css'/>
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	</head>
+	<body>
+		<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/all.js#xfbml=1&version=v2.8&appId=387053835038249&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+		
+
+		
+		<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2F20531316728%2Fposts%2F10154009990506729%2F&width=500&show_text=true&appId=387053835038249&height=290" width="500" height="290" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+
+		<div class="fb-post" data-href="https://www.facebook.com/6250307292/posts/10157687860517293" data-width="500" data-show-text="true"><blockquote cite="https://www.facebook.com/washingtonpost/posts/10157687860517293" class="fb-xfbml-parse-ignore"><p>"She was rough, vulgar, lewd, crass and every other synonym for offensive while delivering a set of remarkable personal attacks in a loud, grating voice. Sound familiar?"" Jonathan Capehart writes in Opinion.</p>Posted by <a href="https://www.facebook.com/washingtonpost/">Washington Post</a> on<a href="https://www.facebook.com/washingtonpost/posts/10157687860517293">Monday, April 30, 2018</a></blockquote></div>
+		<div class="row">
+		<div class="col-6"><h1>By Shares:</h1></div>
+		<div class="col-6"><h1>By Likes:</h1></div>
+		</div>
+		<div class="row">
+							
+			
+			{% for link in share_links %}
+
+			{% endfor %}
+		
+			{% for link in like_links %}
+				<div class="fb-post" data-href={{link}}></div>
+			{% endfor %}
+		</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	</body>
+	</html>

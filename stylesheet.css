@@ -1,0 +1,26 @@
+p {
+  word-wrap: break-word;
+}
+
+img {
+  width = 400px;
+  height = auto;
+}
+
+form {
+  margin: 0 auto; 
+  width:800px;
+  text-align:center;
+}
+text.mpld3-text, div.mpld3-tooltip {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  opacity: 1.0;
+  padding: 2px;
+  border: 0px;
+
+}
+
+    .legend-box {
+      cursor: pointer;
+    }

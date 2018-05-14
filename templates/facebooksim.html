@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Covit</title>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='img/icon2.png') }}">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link href='http://fonts.googleapis.com/css?family=Sintony:400,700' rel='stylesheet' type='text/css'/>
+		<!--Choose Stylesheet here-->
+		<link href='../static/css/stylesheet.css' rel='stylesheet' type='text/css'/>
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	</head>
+	<body>
+		<form >
+			{% for co in medcos %}
+				<input type="button" value={{co}} onclick="window.location.href='../fbsim/{{co}}'" />
+			{% endfor %}
+		</form>
+		<div class="row">
+			<div class="col-1"></div>
+		<div class="col-5"><h1>Top Posts, By Likes:</h1></div>
+		<div class="col-5"><h1>Top Posts, By Comments:</h1></div>
+		<div class="col-1"></div>
+
+		</div>
+							
+			{% for art in likes %}
+			<div class="row">
+				<div class="col-1"></div>
+
+				<div class="col-5">
+					<div a href={{art["Link"]}} style="background-color:LightGray;">
+					<h4>{{art["Headline"]}}</h4>
+					<img src = {{art["Image Link"]}} width=400px style="display:block;
+    margin:auto; padding:5px;" >
+					<p>{{art["Summary"]}}</p>
+				</div>
+				</div>
+				<div class="col-5">
+					<div  style="background-color:LightGray;">
+
+					<h4 a href={{art["Link"]}}>{{coms[loop.index0]["Headline"]}}</h4>
+					<img src = {{coms[loop.index0]["Image Link"]}} width=400px style="display:block;
+    margin:auto; padding:5px;" a href={{art["Link"]}}>
+					<p a href={{art["Link"]}}>{{coms[loop.index0]["Summary"]}}</p>
+				</div>
+				</div>
+				<div class="col-1"></div>
+
+			</div>
+			{% endfor %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	</body>
+	</html>
